@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #1C1B33;
+}
+
+.container {
+    max-width: 90%;
+    height:  100% ;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #2E335A , #1C1B33);
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 600px;
+    margin-left: 25%;
+
+    
+}
+
+#cityInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #1C1B33;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    background: linear-gradient(135deg, #2E335A , #1C1B33);
+    box-shadow: 0px -3px 4px 0px #000000
+   
+}
+
+#addCityBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4A397F
+    ;
+    color: #fff;
+    border: none;
+    border-radius:5px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 30px;
+}
+
+#weatherCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    color: white;
+   
+}
+
+.weather-card {
+    background: linear-gradient(135deg, #5936B4 , #362A84);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+img.weather-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.weather-box {
+    width: 200px;
+    height: 200px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #555;
+}
+
+.weather-description {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+@media screen and (max-width: 576px) {
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #cityInput {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    #addCityBtn {
+        margin-left: 0;
+    }
+
+    #weatherCards {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
